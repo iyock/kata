@@ -14,12 +14,10 @@ class GildedRose {
     }
 
     public void updateQuality(final int numberOfDays) {
-        if(numberOfDays > 1){
             updateBackStagePassesItem(numberOfDays);
             updateAgedBrieItem();
             updateConjuredItem();
             updateOtherItem();
-        }
     }
 
     private void updateBackStagePassesItem(final int numberOfDays) {

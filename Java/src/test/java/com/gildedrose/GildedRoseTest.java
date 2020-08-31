@@ -6,6 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
+
+
+
+
+
     @Test
     void foo() {
 
@@ -21,8 +26,8 @@ class GildedRoseTest {
             --remainingDays;
         }
         assertEquals("foo", app.items[0].name);
-        assertEquals(-2, app.items[0].sellIn);
-        assertEquals(1, app.items[0].quality);
+        assertEquals(-3, app.items[0].sellIn);
+        assertEquals(0, app.items[0].quality);
     }
 
 }
