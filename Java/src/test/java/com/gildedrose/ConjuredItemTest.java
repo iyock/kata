@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ConjuredItemTest {
     @Test
-    void ConjuredItemTest_Before_Sellin_Date(){
+    void conjuredItemTest_Before_Sellin_Date(){
         Item[] items = new Item[] { new Item("Conjured Item", 6, 14) };
         GildedRose app = new GildedRose(items);
         int days = 4;
@@ -24,7 +24,7 @@ public class ConjuredItemTest {
     }
 
     @Test
-    void ConjuredTest_On_Sellin_Date(){
+    void conjuredTest_On_Sellin_Date(){
         Item[] items = new Item[] { new Item("Conjured Item", 6, 14) };
         GildedRose app = new GildedRose(items);
         int days = 6;
@@ -42,7 +42,7 @@ public class ConjuredItemTest {
     }
 
     @Test
-    void ConjuredItemTest_After_Sellin_Date(){
+    void conjuredItemTest_After_Sellin_Date(){
         Item[] items = new Item[] { new Item("Conjured Item", 6, 14) };
         GildedRose app = new GildedRose(items);
         int days = 7;
