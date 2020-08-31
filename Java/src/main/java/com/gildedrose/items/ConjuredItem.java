@@ -10,7 +10,8 @@ public class ConjuredItem implements Updatable {
 
     @Override
     public void updateItem(final Item item) {
-        if (item.name.contains(CONJURED_ITEM)){
+        final String itemName = item.name.toLowerCase();
+        if (itemName.contains(CONJURED_ITEM)){
             item.quality -= 2;
             updateSellin(item);
             if(item.quality < 0){

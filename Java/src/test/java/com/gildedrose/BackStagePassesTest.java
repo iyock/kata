@@ -20,7 +20,7 @@ public class BackStagePassesTest {
             app.updateQuality(remainingDays);
             --remainingDays;
         }
-        assertEquals("Backstage passes", app.items[0].name);
+        assertEquals("Backstage paSSes", app.items[0].name);
         assertEquals(2, app.items[0].sellIn);
         assertEquals(15, app.items[0].quality);
     }
@@ -40,7 +40,7 @@ public class BackStagePassesTest {
             app.updateQuality(remainingDays);
             --remainingDays;
         }
-        assertEquals("Backstage passes", app.items[0].name);
+        assertEquals("Backstage paSSes", app.items[0].name);
         assertEquals(0, app.items[0].sellIn);
         assertEquals(20, app.items[0].quality);
     }
@@ -59,12 +59,12 @@ public class BackStagePassesTest {
             app.updateQuality(remainingDays);
             --remainingDays;
         }
-        assertEquals("Backstage passes", app.items[0].name);
+        assertEquals("Backstage paSSes", app.items[0].name);
         assertEquals(-1, app.items[0].sellIn);
         assertEquals(0, app.items[0].quality);
     }
 
     private Item[] createItem (){
-        return new Item[]{ new Item("Backstage passes", 6, 3) };
+        return new Item[]{ new Item("Backstage paSSes", 6, 3) };
     }
 }

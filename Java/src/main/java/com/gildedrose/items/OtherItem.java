@@ -26,6 +26,7 @@ public class OtherItem implements Updatable {
     }
 
     private boolean isContainingItemName(final Item item, final String name){
-        return item.name.contains(name);
+        final String itemName = item.name.toLowerCase();
+        return itemName.contains(name);
     }
 }

@@ -11,7 +11,8 @@ public class AgedBrieItem implements Updatable {
 
     @Override
     public void updateItem(final Item item) {
-        if(item.name.contains(Constants.AGED_BRIE)){
+        final String itemName = item.name.toLowerCase();
+        if(itemName.contains(Constants.AGED_BRIE)){
             item.quality += 1;
             updateSellin(item);
             if(item.quality > QUALITY_MAX_VALUE){

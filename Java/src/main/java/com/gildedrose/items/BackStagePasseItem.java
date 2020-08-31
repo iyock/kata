@@ -15,7 +15,7 @@ public class BackStagePasseItem implements Updatable {
 
     @Override
     public void updateItem(final Item item) {
-        final String itemName = item.name;
+        final String itemName = item.name.toLowerCase();
         if(itemName.contains(BACKSTAGE_PASSES) ){
             updateQualityByDay(this.numberOfDays, item);
             updateSellin(item);
