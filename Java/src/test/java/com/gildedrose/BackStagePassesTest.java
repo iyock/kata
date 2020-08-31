@@ -64,6 +64,26 @@ public class BackStagePassesTest {
         assertEquals(0, app.items[0].quality);
     }
 
+    @Test
+    void backStagePassesTest_With_Maximum_Quality() {
+
+        final Item[] items = new Item[]{ new Item("Backstage paSSes", 4, 50) };
+        final GildedRose app = new GildedRose(items);
+        final int days = 4;
+
+
+        int remainingDays = days;
+
+        for (int i = 0; i < days; i++) {
+            app.updateQuality(remainingDays);
+            --remainingDays;
+        }
+        assertEquals("Backstage paSSes", app.items[0].name);
+        assertEquals(0, app.items[0].sellIn);
+        assertEquals(50, app.items[0].quality);
+    }
+
+
     private Item[] createItem (){
         return new Item[]{ new Item("Backstage paSSes", 6, 3) };
     }
