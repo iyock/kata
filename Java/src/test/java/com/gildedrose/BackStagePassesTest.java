@@ -9,9 +9,9 @@ public class BackStagePassesTest {
     @Test
     void backStagePassesTest_Before_Concert_Day() {
 
-        Item[] items = new Item[] { new Item("Backstage passes", 6, 3) };
-        GildedRose app = new GildedRose(items);
-        int days = 4;
+        final Item[] items = createItem();
+        final GildedRose app = new GildedRose(items);
+        final int days = 4;
 
 
         int remainingDays = days;
@@ -29,9 +29,9 @@ public class BackStagePassesTest {
     @Test
     void backStagePassesTest_On_Concert_Day() {
 
-        Item[] items = new Item[] { new Item("Backstage passes", 6, 3) };
-        GildedRose app = new GildedRose(items);
-        int days = 6;
+        final Item[] items = createItem();
+        final GildedRose app = new GildedRose(items);
+        final int days = 6;
 
 
         int remainingDays = days;
@@ -48,9 +48,9 @@ public class BackStagePassesTest {
     @Test
     void backStagePassesTest_After_Concert() {
 
-        Item[] items = new Item[] { new Item("Backstage passes", 5, 3) };
-        GildedRose app = new GildedRose(items);
-        int days = 6;
+        final Item[] items = createItem();
+        final GildedRose app = new GildedRose(items);
+        final int days = 7;
 
 
         int remainingDays = days;
@@ -62,5 +62,9 @@ public class BackStagePassesTest {
         assertEquals("Backstage passes", app.items[0].name);
         assertEquals(-1, app.items[0].sellIn);
         assertEquals(0, app.items[0].quality);
+    }
+
+    private Item[] createItem (){
+        return new Item[]{ new Item("Backstage passes", 6, 3) };
     }
 }

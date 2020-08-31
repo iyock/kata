@@ -8,9 +8,9 @@ public class AgedBrieTest {
 
     @Test
     void agedBrieTest_Before_Sellin_Date(){
-        Item[] items = new Item[] { new Item("Aged Brie", 6, 3) };
-        GildedRose app = new GildedRose(items);
-        int days = 4;
+        final Item[] items = createItem();
+        final GildedRose app = new GildedRose(items);
+        final int days = 4;
 
 
         int remainingDays = days;
@@ -26,9 +26,9 @@ public class AgedBrieTest {
 
     @Test
     void agedBrieTest_On_Sellin_Date(){
-        Item[] items = new Item[] { new Item("Aged Brie", 6, 3) };
-        GildedRose app = new GildedRose(items);
-        int days = 6;
+        final Item[] items =  createItem();
+        final GildedRose app = new GildedRose(items);
+        final int days = 6;
 
 
         int remainingDays = days;
@@ -44,9 +44,9 @@ public class AgedBrieTest {
 
     @Test
     void agedBrieTest_After_Sellin_Date(){
-        Item[] items = new Item[] { new Item("Aged Brie", 6, 3) };
-        GildedRose app = new GildedRose(items);
-        int days = 7;
+        final Item[] items =  createItem();
+        final GildedRose app = new GildedRose(items);
+        final int days = 7;
 
 
         int remainingDays = days;
@@ -58,5 +58,9 @@ public class AgedBrieTest {
         assertEquals("Aged Brie", app.items[0].name);
         assertEquals(-1, app.items[0].sellIn);
         assertEquals(10, app.items[0].quality);
+    }
+
+    private Item[] createItem (){
+        return new Item[]{new Item("Aged Brie", 6, 3) };
     }
 }
