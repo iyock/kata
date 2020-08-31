@@ -5,8 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AgedBrieTest {
+
     @Test
-    void AgedBrieTest_Before_Sellin(){
+    void AgedBrieTest_Before_Sellin_Date(){
         Item[] items = new Item[] { new Item("Aged Brie", 6, 3) };
         GildedRose app = new GildedRose(items);
         int days = 4;

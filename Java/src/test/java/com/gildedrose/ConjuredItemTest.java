@@ -4,12 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BackStagePassesTest {
-
+public class ConjuredItemTest {
     @Test
-    void backStagePassesTest_Before_Concert_Day() {
-
-        Item[] items = new Item[] { new Item("Backstage passes", 6, 3) };
+    void ConjuredItemTest_Before_Sellin_Date(){
+        Item[] items = new Item[] { new Item("Conjured Item", 6, 14) };
         GildedRose app = new GildedRose(items);
         int days = 4;
 
@@ -20,16 +18,14 @@ public class BackStagePassesTest {
             app.updateQuality(remainingDays);
             --remainingDays;
         }
-        assertEquals("Backstage passes", app.items[0].name);
+        assertEquals("Conjured Item", app.items[0].name);
         assertEquals(2, app.items[0].sellIn);
-        assertEquals(15, app.items[0].quality);
+        assertEquals(6, app.items[0].quality);
     }
 
-
     @Test
-    void backStagePassesTest_On_Concert_Day() {
-
-        Item[] items = new Item[] { new Item("Backstage passes", 6, 3) };
+    void ConjuredTest_On_Sellin_Date(){
+        Item[] items = new Item[] { new Item("Conjured Item", 6, 14) };
         GildedRose app = new GildedRose(items);
         int days = 6;
 
@@ -40,17 +36,16 @@ public class BackStagePassesTest {
             app.updateQuality(remainingDays);
             --remainingDays;
         }
-        assertEquals("Backstage passes", app.items[0].name);
+        assertEquals("Conjured Item", app.items[0].name);
         assertEquals(0, app.items[0].sellIn);
-        assertEquals(20, app.items[0].quality);
+        assertEquals(2, app.items[0].quality);
     }
 
     @Test
-    void backStagePassesTest_After_Concert() {
-
-        Item[] items = new Item[] { new Item("Backstage passes", 5, 3) };
+    void ConjuredItemTest_After_Sellin_Date(){
+        Item[] items = new Item[] { new Item("Conjured Item", 6, 14) };
         GildedRose app = new GildedRose(items);
-        int days = 6;
+        int days = 7;
 
 
         int remainingDays = days;
@@ -59,7 +54,7 @@ public class BackStagePassesTest {
             app.updateQuality(remainingDays);
             --remainingDays;
         }
-        assertEquals("Backstage passes", app.items[0].name);
+        assertEquals("Conjured Item", app.items[0].name);
         assertEquals(-1, app.items[0].sellIn);
         assertEquals(0, app.items[0].quality);
     }
